@@ -1,7 +1,11 @@
 <template>
   <div id="app">
-    
-    <HelloWorld />
+    <body>
+      <header>
+       <h1 class="title">Boolflix</h1>
+      </header>
+      <HelloWorld />
+    </body>
   </div>
 </template>
 
@@ -17,4 +21,5 @@ export default {
 </script>
 
 <style lang="scss">
+@import "./style/common.scss";
 </style>
