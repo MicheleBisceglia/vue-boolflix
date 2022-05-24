@@ -1,6 +1,6 @@
 <template>
     <div>
-        <HelloWorld @searchClick="search"/>
+        <AppSearch @searchClick="search"/>
         <div class="container">
             <div class="row row-cols-3 row-cols-md-4 row-cols-lg-6 gy-4">
                 <AppCard class="appCard"/>
@@ -21,12 +21,12 @@
 </template>
 
 <script>
-import HelloWorld from './HelloWorld.vue';
+import AppSearch from './AppSearch.vue';
 import AppCard from './AppCard.vue'
 export default {
   name: "AppMain",
     components: {
-       HelloWorld ,
+       AppSearch ,
        AppCard
        },
     methods: {
