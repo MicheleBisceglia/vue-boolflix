@@ -1,22 +1,23 @@
 <template>
   <div id="app">
     <body>
-      <header>
-       <h1 class="title">Boolflix</h1>
-      </header>
-      <HelloWorld />
+      <AppHeader />
+      <AppMain />
     </body>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import AppMain from "./components/AppMain.vue";
+import AppHeader from "./components/AppHeader.vue"
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    AppMain,
+    AppHeader
   },
+  
 };
 </script>
 
