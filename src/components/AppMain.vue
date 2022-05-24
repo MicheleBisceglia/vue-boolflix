@@ -1,39 +1,25 @@
 <template>
     <div>
-        <AppSearch @searchClick="search"/>
+        <AppHeader />
         <div class="container">
-            <div class="row row-cols-3 row-cols-md-4 row-cols-lg-6 gy-4">
-                <AppCard class="appCard"/>
-                <AppCard class="appCard"/>
-                <AppCard class="appCard"/>
-                <AppCard class="appCard"/>
-                <AppCard class="appCard"/>
-                <AppCard class="appCard"/>
-                <AppCard class="appCard"/>
-                <AppCard class="appCard"/>
-                <AppCard class="appCard"/>
-                <AppCard class="appCard"/>
-                <AppCard class="appCard"/>
-                <AppCard class="appCard"/>
+            <div class="row row-cols-3 row-cols-md-4 row-cols-lg-6 gy-5">
+                <AppCard v-for="item in movies" :key="item.index" :movie="item" class="appCard"/>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-import AppSearch from './AppSearch.vue';
 import AppCard from './AppCard.vue'
+
 export default {
   name: "AppMain",
     components: {
-       AppSearch ,
        AppCard
        },
-    methods: {
-    search (searchKey) {
-      console.log('search', searchKey);
-    }
-  }
+    props: {
+        movies: Array
+    },
 };
 </script>
 
