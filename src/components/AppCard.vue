@@ -1,21 +1,21 @@
 <template>
     <div class="container">
       <div class="ms_container">
-        <h2>Titolo: {{ movie.title}}</h2>
-        <h3>Titolo Originale: {{ movie.original_title }} </h3>
-        <div>Valutazione: {{ movie.vote_average }}</div>
+        <h2>Titolo: {{ movie.title ? movie.title : movie.name }}</h2>
+        <h3>Titolo Originale: {{ movie.original_title ? movie.original_title : movie.original_name}} </h3>
         <span>Lingua: </span>
         <img v-if="flags.includes(movie.original_language)" :src='"../assets/img/flag-" + movie.original_language +".png"' alt="lenguage">
         <span class="language bg-primary" v-else>{{ movie.original_language}}</span>
+        <div>Valutazione: {{ movie.vote_average }}</div>
       </div>
     </div>
 </template>
 
 <script>
    export default {
-    name: "AppHeader",
+    name: "AppCard",
    props: {
-       movie: Object
+       movie: Object,
    },
    data() {
        return {
@@ -31,14 +31,15 @@
     border: solid 1px black;
     text-align: left;
     min-height: 200px;
-    padding-left: 20%;
+    padding-left: 15%;
+    font-size: .8rem;
 }
 h2 {
-    font-size: 80%;
     padding-top: 30%;
+    font-size: .8rem;
 }
 h3 {
-    font-size: 80%
+    font-size: .8rem
     }
 img {
     height: 15px;
