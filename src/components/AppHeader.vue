@@ -3,8 +3,9 @@
       <header>
         <h1 class="title">Boolflix</h1>
         <div class="search_bar mt-3">
-        <input placeholder="Inizia la ricerca" class="m-3" type="text" v-model="searchKey">
-        <button @click="$emit('searchClick', searchKey)">Cerca Film
+        <button @click="$emit('searchClick', searchKey)">
+          <input placeholder="Inizia la ricerca" class="m-3" type="text" v-model="searchKey">
+          <i class="fas fa-search"></i>
         </button>
       </div>
       </header>
@@ -31,5 +32,17 @@ export default {
     justify-content: flex-end;
     align-items: center;
     width: 80%;
+    color: white;
   }
+  button {
+    color: white;
+    border: none;
+    background-color: #141414;
+  }
+  input {
+    display: none;
+  }
+  button:hover input{
+    display: inline;
+}
 </style>

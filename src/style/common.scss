@@ -1,15 +1,15 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
 body {
-    background-color: gray;
+    background-color: #141414;
+    color: white;
  }
 
 header {
-    background-color: black;
-    color: red;
     height: 80px;
     display: flex;
     align-items: center;
+    color: red;
 }
 
 .title {
