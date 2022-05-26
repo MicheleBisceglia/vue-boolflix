@@ -1,5 +1,16 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
+.my_scroll::-webkit-scrollbar {
+    background-color: #141414;
+    width: 0.4rem;
+}
+.my_scroll::-webkit-scrollbar-thumb {
+    background-color: #707070;
+    border-radius: 100vw;
+}
+.my_scroll::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(133, 12, 12);
+}
 body {
     background-color: #141414;
     color: white;
@@ -7,11 +18,14 @@ body {
 
 header {
     height: 80px;
+    width: 100vw;
+    color: red;
+    background-color: #141414;
+    position: fixed;
+    z-index: 99;
     display: flex;
     align-items: center;
-    color: red;
 }
-
-.title {
-    margin-left: 30px;
+main {
+    padding-top: 100px;
 }

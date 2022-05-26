@@ -2,16 +2,14 @@
     <div>
       <header>
         <h1 class="title">Boolflix</h1>
-        <div class="search_bar mt-3">
-        <button @click="$emit('searchClick', searchKey)">
-          <input placeholder="Inizia la ricerca" class="m-3" type="text" v-model="searchKey">
-          <i class="fas fa-search"></i>
-        </button>
-      </div>
+        <div class="search_bar">
+          <button @click="$emit('searchClick', searchKey)">
+            <input placeholder="Inizia la ricerca" type="text" v-model="searchKey">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
       </header>
-      
-    </div>
-    
+    </div>  
 </template>
 
 <script>
@@ -30,9 +28,8 @@ export default {
 .search_bar {
     display: flex;
     justify-content: flex-end;
-    align-items: center;
-    width: 80%;
     color: white;
+    width: 85%;
   }
   button {
     color: white;
