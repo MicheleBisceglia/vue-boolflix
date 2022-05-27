@@ -1,14 +1,15 @@
 @import "~bootstrap/scss/bootstrap.scss";
-body {
-    background-color: #141414;
-    color: white;
- }
+@import "../style/variables.scss";
 
+body {
+    background-color: $primary-color;
+    color: white;
+}
 header {
     height: 80px;
     width: 100vw;
     color: red;
-    background-color: #141414;
+    background-color: $primary-color;
     position: fixed;
     z-index: 99;
     display: flex;
@@ -16,4 +17,11 @@ header {
 }
 main {
     padding-top: 80px;
+}
+.null_image{
+    width: 100%;
+    padding-top: 40%;
+    padding-bottom: 35%;
+    background-color: $secondary-color;
+    opacity: 70%;
 }

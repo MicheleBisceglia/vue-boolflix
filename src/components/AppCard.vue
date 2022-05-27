@@ -48,8 +48,10 @@
 
 <style lang="scss" scoped>
 @import '~@fortawesome/fontawesome-free/css/all.min.css';
+@import "../style/common.scss";
+
 .app_card {
-    background-color: #141414;
+    background-color: $primary-color;
     font-size: .8rem;
     position: relative;
 }
@@ -83,13 +85,6 @@
     position: absolute;
     bottom: 30px;
     left: 20px;
-}
-.null_image{
-    width: 100%;
-    padding-top: 40%;
-    padding-bottom: 35%;
-    background-color: #f5f5f5;
-    opacity: 70%;
 }
 .card_info {
     display: none;

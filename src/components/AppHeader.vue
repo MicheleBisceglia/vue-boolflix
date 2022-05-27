@@ -69,7 +69,7 @@ export default {
 button {
   color: white;
   border: none;
-  background-color: #141414;
+  background-color: $primary-color;
   padding-right: 20px;
   display: flex;
   }
@@ -78,7 +78,7 @@ input {
   }
 button:hover input{
     display: inline;
-    background-color: #141414;
+    background-color: $primary-color;
     border-style: none;
     color: white;
     border-radius: 5px;

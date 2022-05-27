@@ -47,8 +47,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../style/common.scss";
   footer {
-    background-color: #141414;
+    background-color: $primary-color;
   }
   a {
     border-style: none;
