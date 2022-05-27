@@ -6,6 +6,8 @@
       
       <!--passo gli array in Appmain-->
       <AppMain :movies="moviesList" :series="seriesList"/>
+
+      <AppFooter />
     </body>
   </div>
 </template>
@@ -13,6 +15,7 @@
 <script>
 import AppMain from "./components/AppMain.vue";
 import AppHeader from "./components/AppHeader.vue"
+import AppFooter from "./components/AppFooter.vue"
 import axios from "axios";
 
 export default {
@@ -20,39 +23,40 @@ export default {
   components: {
     AppMain,
     AppHeader,
+    AppFooter
   },
     data() {
       //Creo un array per i film e uno per le serie
-        return {
+      return {
         moviesList : [],
         seriesList : [],
-           }
+      }
   },
   methods: {
     //Funzione di ricerca nella api
     search: function(searchKey) {
     //lettura api film
       axios.get("https://api.themoviedb.org/3/search/movie", {
-          params: {
-              api_key: "296d9c89fe4c7798ffeb669f21665ae2",
-              query: searchKey
-          }
-      })
+        params: {
+          api_key: "296d9c89fe4c7798ffeb669f21665ae2",
+          query: searchKey
+        }
+    })
     //invio i dati all'array movieslist
       .then((resp) => {
-          this.moviesList = resp.data.results;
-      })
+        this.moviesList = resp.data.results;
+    })
 
     //lettura api Serie TV
     axios.get("https://api.themoviedb.org/3/search/tv", {
-          params: {
-              api_key: "296d9c89fe4c7798ffeb669f21665ae2",
-              query: searchKey
+      params: {
+        api_key: "296d9c89fe4c7798ffeb669f21665ae2",
+          query: searchKey
           },
       })
       //invio i dati all'array serieslist
       .then((resp) => {
-           this.seriesList = resp.data.results;
+        this.seriesList = resp.data.results;
       })
     }
   }

@@ -1,0 +1,19 @@
+@media screen and (max-width:770px) {
+  .header_list li {
+      display: none;
+  }
+}
+
+@media screen and (max-width:900px) {
+  .jumbotron p {
+    overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+  }
+}
+
+@media screen and (max-width:450px) {
+  .jumbotron {
+    display: none;
+  }
+}

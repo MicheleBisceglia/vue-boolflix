@@ -1,11 +1,14 @@
 <template>
+    <!-- Card informazioni -->
       <div class="app_card">
         <div class="card_bg">
-          <img
+        
+        <!-- v-if per sostituire immagini vuote -->
+            <img
             v-if="movie.backdrop_path != null "
             :src='"https://image.tmdb.org/t/p/w342/" + movie.poster_path' alt="">
-          <img v-else src="https://bitsofco.de/content/images/2018/12/Screenshot-2018-12-16-at-21.06.29.png" class="null_image">
-          <h3 class="title_card">{{ movie.title ? movie.title : movie.name }}</h3>
+            <img v-else src="https://bitsofco.de/content/images/2018/12/Screenshot-2018-12-16-at-21.06.29.png" class="null_image">
+            <h3 class="title_card">{{ movie.title ? movie.title : movie.name }}</h3>
         </div>
         <div class="card_info">
             <img class="card_info_img" :src='"https://image.tmdb.org/t/p/w342/" + movie.backdrop_path' alt="">
